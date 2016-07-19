@@ -21,10 +21,10 @@ module.exports.policies = {
   '*': ['sessionAuth'],
   'UserController': {
     'signin': [],
-    'logout': []
+    'logout': ['sessionAuth']
   },
   'PostController': {
-    'addpost': [],
+    'addpost': ['sessionAuth'],
     'showPosts': []
   }
   /***************************************************************************

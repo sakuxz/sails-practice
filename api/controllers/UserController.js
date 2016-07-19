@@ -7,7 +7,7 @@ module.exports = {
       // 呼叫 UserService.checkUser 完成相關處理
       let userExist = await UserService.checkUser(user);
       if(!userExist){
-          res.view('index.jade');
+          res.view('info.jade', {loginSuccess: false});
           return;
       }
       req.session.uid = userExist.id;
