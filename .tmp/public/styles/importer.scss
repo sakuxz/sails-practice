@@ -1,0 +1,14 @@
+$icon-font-path: "../fonts/bootstrap/";
+@import "../../bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
+.form-signin {
+  max-width: 450px;
+  margin: 2em auto;
+  background: #eae7e7;
+  padding: 0.5em 2.5em 2em;
+  box-shadow: 0 2px 0 #d0cccc,0 4px 3px #f1f1f1;
+  border-radius: 2px;
+  .form-signin-heading {
+    margin: 1em 0;
+    color: #b7b7b7;
+  }
+}
