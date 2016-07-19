@@ -51,7 +51,8 @@
     "build-prod-docker-images": "docker build -t trunk/sails .",
     "start-mysql-docker": "docker-compose up -d mysql",
     "start-web-docker": "docker rm -f web || true && docker run -d --link mysql -p 1337:1337 --restart always --name web trunk/sails",
-    "start-prod-docker": "npm run start-mysql-docker && npm run start-web-docker"
+    "start-prod-docker": "npm run start-mysql-docker && npm run start-web-docker",
+    "sass-dev": "webpack --watch"
   },
   "main": "app.js",
   "repository": {
@@ -71,6 +72,15 @@
     "mocha-junit-reporter": "^1.11.1",
     "sinon": "^1.17.2",
     "supertest": "^1.2.0",
-    "supertest-as-promised": "^2.0.2"
+    "supertest-as-promised": "^2.0.2",
+
+    "css-loader": "^0.23.1",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "file-loader": "^0.9.0",
+    "node-sass": "^3.6.0",
+    "sass-loader": "^3.2.0",
+    "style-loader": "^0.13.1",
+    "url-loader": "^0.5.7",
+    "webpack": "^1.12.9"
   }
 }
