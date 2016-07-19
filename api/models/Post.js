@@ -9,7 +9,7 @@ module.exports = {
       allowNull: true
     },
   },
-  associate: function() {
+  associations: function() {
     Post.belongsTo(User, {
       onDelete: 'CASCADE',
       foreignKey: {

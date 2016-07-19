@@ -9,7 +9,7 @@ module.exports = {
       allowNull: false
     }
   },
-  associate: function() {
+  associations: function() {
     User.hasMany(Post);
   },
 };

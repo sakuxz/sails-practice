@@ -12,11 +12,23 @@ module.exports = {
       }
       req.session.uid = userExist.id;
       req.session.name = userExist.name;
+      req.session.authenticated = true;
 
       // 回傳驗證結果
       res.view('info.jade', {user: userExist, loginSuccess: true});
     } catch (e) {
       res.serverError(e);
     }
-  }
+  },
+  logout: async (req, res) => {
+    try {
+      req.session.uid = undefined;
+      req.session.name = undefined;
+      req.session.authenticated = undefined;
+
+      res.redirect('/');
+    } catch (e) {
+      res.serverError(e);
+    }
+  },
 }

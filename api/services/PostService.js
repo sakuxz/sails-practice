@@ -11,7 +11,10 @@ module.exports = {
   },
   getPosts: async () => {
     try {
-      let posts = await Post.findAll();
+      let posts = await Post.findAll({
+        include: [ User ],
+        order: [['createdAt', 'DESC']]
+      });
       return posts;
 
     } catch (e) {

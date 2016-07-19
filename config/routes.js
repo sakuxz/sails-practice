@@ -32,13 +32,12 @@ module.exports.routes = {
   *                                                                          *
   ***************************************************************************/
 
-  '/': {
-    view: 'index'
-  },
+  '/': 'PostController.showPosts',
 
   'post /signin': 'UserController.signin',
+  'get /logout': 'UserController.logout',
   'get /login': { view: 'login' },
-  'post /addpost': 'PostController.post',
+  'post /addpost': 'PostController.addPost',
   'get /post': { view: 'post' }
 
   /***************************************************************************

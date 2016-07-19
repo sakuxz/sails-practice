@@ -3,6 +3,9 @@ extends ./layout
 block body
   .container
     h1 main index
+    -for post in posts
+      h3 #{post.User.email}
+      p #{post.content}  
 
     
 block scripts
