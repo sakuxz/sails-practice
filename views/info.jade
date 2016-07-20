@@ -1,13 +1,13 @@
 extends ./layout
 
 block body
-  .container
+  .container.user-info
     h1 user info
     -if (loginSuccess)  
       h3 id: #{user.id}
       h3 email: #{user.email}
       h3 createdAt: #{user.createdAt}
     -else 
-      h3 incorrect email or password
+      h3.err incorrect email or password
 
 block scripts
