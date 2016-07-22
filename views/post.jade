@@ -2,11 +2,13 @@ extends ./layout
 
 block body
   .container
-    form.form-post(action='/addpost', method='POST')
+    form.form-post(action='/addpost', method='POST' enctype='multipart/form-data')
       h2.form-post-heading Edit your post
       div.form-group
         label(for='inputContent') your content
         textarea#inputContent.form-control(name='content', placeholder='content', required='', autofocus='')
+      div.form-group
+        input(type='file' name='img' accept="image/*")
       button.btn.btn-lg.btn-primary.btn-block(type='submit') Post
 
 block scripts

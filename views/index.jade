@@ -1,14 +1,18 @@
 extends ./layout
 
 mixin card(data)
-  div.card
+  -var section = data.content.split('\n');
+  div.card(class=data.img?'has-img':'' )
     -if(data.img)
-      img(src=data.img)
-    pre #{data.content}  
-    h3 
-      span.name-icon #{data.User.email[0]}
-      |#{data.User.email}
-      span.time #{new Date(data.createdAt).toLocaleTimeString()} 
+      div.img-wrapper
+        img(src='uploads/'+data.img)
+    div.card-content
+      -for sec in section
+        p #{sec}
+      h3 
+        span.name-icon #{data.User.email[0]}
+        |#{data.User.email}
+        span.time #{new Date(data.createdAt).toLocaleTimeString()} 
 
 block body
   .container.index-page

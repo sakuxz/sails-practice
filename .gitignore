@@ -122,3 +122,5 @@ www
 assets/bower
 coverage
 test-results.xml
+
+.tmp/public/uploads/

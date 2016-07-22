@@ -41,11 +41,24 @@ body {
     color: #75c5ff; }
   .index-page .card {
     border-radius: 6px;
-    padding: 15px 30px;
     box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
     background: white;
     margin-bottom: 30px; }
-    .index-page .card pre {
+    .index-page .card.has-img {
+      margin-top: 65px; }
+      .index-page .card.has-img .card-content {
+        margin-top: -23px; }
+    .index-page .card .img-wrapper {
+      overflow: hidden;
+      border-radius: 6px;
+      margin: 0 15px;
+      transform: translateY(-30px);
+      box-shadow: 0 16px 38px -12px rgba(0, 0, 0, 0.56), 0 4px 25px 0 rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2); }
+      .index-page .card .img-wrapper img {
+        width: 100%; }
+    .index-page .card .card-content {
+      padding: 15px 30px; }
+    .index-page .card > p {
       background: inherit;
       border: none;
       padding: 0;
@@ -53,7 +66,8 @@ body {
       font-size: 19px;
       margin-bottom: 0.55em;
       line-height: 1.3;
-      padding-left: 4px; }
+      padding-left: 4px;
+      min-height: 0.5em; }
     .index-page .card h3 {
       margin: 0;
       font-size: 15px;
