@@ -27,6 +27,21 @@ describe('對 Post Service 進行驗證', function() {
     }
   });
 
+  it('create post with img', async (done) => {
+    try {
+      let newPost = {
+        content: '123',
+        UserId: 1,
+        img: '123.jpg'
+      }
+      let posts = await PostService.addPost(newPost);
+      posts.toJSON().should.has.keys('id', 'content', 'img', 'UserId', 'createdAt', 'updatedAt');
+      done();
+    } catch (e) {
+      done(e);
+    }
+  });
+
   it('get all posts', async (done) => {
     try {
       let posts = await PostService.getPosts();
